@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class GunSystem : MonoBehaviour
 {
@@ -19,7 +20,10 @@ public class GunSystem : MonoBehaviour
     public LayerMask whatIsEnemy;
 
     //Graphics
-    //public CamShake
+    public GameObject muzzleFlash, bulletHolerGraphic;
+    public CameraShake camShake;
+    public float camShakeMagnitude, camShakeDuration;
+    public TextMeshProUGUI text;
 
     private void Awake()
     {
@@ -29,6 +33,9 @@ public class GunSystem : MonoBehaviour
     private void Update()
     {
         MyInput();
+
+        //SetText
+        text.SetText(bulletsLeft + " / " + magazineSize);
     }
     private void MyInput()
     {
@@ -64,11 +71,18 @@ public class GunSystem : MonoBehaviour
         {
             Debug.Log(rayHit.collider.name);
 
-            if (rayHit.collider.CompareTag("Enemy"))
+            /*if (rayHit.collider.CompareTag("Enemy"))
             {
-                //rayHit.collider.GetComponent<ShootingAI>().TakeDamage(damage);
-            }
+                rayHit.collider.GetComponent<ShootingAI>().TakeDamage(damage);
+            }*/
         }
+
+        //ShakeCamera
+        camShake.Shake(camShakeDuration, camShakeMagnitude);
+
+        //Graphics
+        Instantiate(bulletHolerGraphic, rayHit.point, Quaternion.Euler(0, 90, 0));
+        Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
 
         bulletsLeft--;
         bulletsShot--;
