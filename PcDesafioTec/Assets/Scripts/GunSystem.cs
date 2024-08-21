@@ -25,6 +25,9 @@ public class GunSystem : MonoBehaviour
     public float camShakeMagnitude, camShakeDuration;
     public TextMeshProUGUI text;
 
+    //UI / UX
+    public GameObject reloadingPainel;
+
     private void Awake()
     {
         bulletsLeft = magazineSize;
@@ -36,6 +39,15 @@ public class GunSystem : MonoBehaviour
 
         //SetText
         text.SetText(bulletsLeft + " / " + magazineSize);
+
+        if(reloading == true)
+        {
+            reloadingPainel.SetActive(true);
+        }
+        else
+        {
+            reloadingPainel.SetActive(false);
+        }
     }
     private void MyInput()
     {
@@ -81,7 +93,10 @@ public class GunSystem : MonoBehaviour
         camShake.Shake(camShakeDuration, camShakeMagnitude);
 
         //Graphics
-        Instantiate(bulletHolerGraphic, rayHit.point, Quaternion.Euler(0, 90, 0));
+
+            Instantiate(bulletHolerGraphic, rayHit.point, Quaternion.Euler(0, attackPoint.transform.rotation.y, 0));
+        
+        
         Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
 
         bulletsLeft--;
