@@ -20,7 +20,7 @@ public class GunSystem : MonoBehaviour
     public LayerMask whatIsEnemy;
 
     //Graphics
-    public GameObject muzzleFlash, bulletHolerGraphic;
+    public GameObject muzzleFlash, bulletHoleGraphic;
     public CameraShake camShake;
     public float camShakeMagnitude, camShakeDuration;
     public TextMeshProUGUI text;
@@ -76,10 +76,14 @@ public class GunSystem : MonoBehaviour
         readyToShoot = false;
 
         //Spread
+        float x = Random.Range(-spread, spread);
+        float y = Random.Range(-spread, spread);
 
+        //Calculate Direction with Spread
+        Vector3 direction = cam.transform.forward + new Vector3(x, y, 0);
 
         //RayCast
-        if(Physics.Raycast(cam.transform.position, cam.transform.forward, out rayHit, range, whatIsEnemy))
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out rayHit, range, whatIsEnemy))
         {
             Debug.Log(rayHit.collider.name);
 
@@ -93,10 +97,8 @@ public class GunSystem : MonoBehaviour
         camShake.Shake(camShakeDuration, camShakeMagnitude);
 
         //Graphics
-
-            Instantiate(bulletHolerGraphic, rayHit.point, Quaternion.Euler(0, attackPoint.transform.rotation.y, 0));
-        
-        
+        float angle = Vector3.Angle(rayHit.normal, Vector3.forward);
+        Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, angle, 0));
         Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
 
         bulletsLeft--;
