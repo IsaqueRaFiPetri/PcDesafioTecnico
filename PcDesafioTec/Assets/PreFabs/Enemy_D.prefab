@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 2373418760232317809}
   - component: {fileID: 9155782233905368830}
   - component: {fileID: 5441341048255290409}
+  - component: {fileID: 1024740863552855660}
+  - component: {fileID: -914143261404448240}
   m_Layer: 0
   m_Name: Enemy_D
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,6 +86,35 @@ MonoBehaviour:
   attackRange: 0
   playerInSightRange: 0
   playerInAttackRange: 0
+--- !u!54 &1024740863552855660
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3912054345424847280}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &-914143261404448240
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3912054345424847280}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3496304, y: 2.8972945, z: 3.4551566}
+  m_Center: {x: 0.6748148, y: 0.948647, z: 1.2275785}
 --- !u!1001 &2292272295767892781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153,6 +184,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bbd87a5c12e92748ab033feeaee5e85, type: 3}
+--- !u!1 &6050354174752715814 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5492391064966338315, guid: 4bbd87a5c12e92748ab033feeaee5e85, type: 3}
+  m_PrefabInstance: {fileID: 2292272295767892781}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1071475108659234792
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050354174752715814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!4 &6394264556161445532 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5148516240987868593, guid: 4bbd87a5c12e92748ab033feeaee5e85, type: 3}

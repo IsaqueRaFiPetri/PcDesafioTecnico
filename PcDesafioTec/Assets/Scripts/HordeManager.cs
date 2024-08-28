@@ -12,14 +12,11 @@ public class HordeManager : MonoBehaviour
     public float spawnDelay = 0.5f; // Intervalo de spawn entre cada inimigo
     public static int enemiesKilled;
 
-    public TextMeshProUGUI textWave;
-
     private int waveNumber = 0; // Contador de hordas
 
     void Start()
     {
         StartCoroutine(SpawnHorde());
-        textWave.SetText("Horde " + waveNumber + ": " +enemiesKilled + "/" + waveEnemies);
     }
     private void Update()
     {

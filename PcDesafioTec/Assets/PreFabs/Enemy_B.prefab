@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 7636012978408740961}
   - component: {fileID: 9016380842508032804}
   - component: {fileID: -5706157943759525633}
+  - component: {fileID: -2238843104650866811}
   m_Layer: 0
   m_Name: Enemy_B
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,7 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 9016380842508032804}
-  health: 0
+  health: 120
   whatIsGround:
     serializedVersion: 2
     m_Bits: 128
@@ -77,13 +78,26 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 0
-  timeBetweenAttacks: 0
+  walkPointRange: 7
+  timeBetweenAttacks: 1
   projectile: {fileID: 3724796182186475538, guid: 5a84ee2656873544a9f801d43caf5a6d, type: 3}
-  sightRange: 0
-  attackRange: 0
+  sightRange: 30
+  attackRange: 18
   playerInSightRange: 0
   playerInAttackRange: 0
+--- !u!65 &-2238843104650866811
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4196828019572297460}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.02309, y: 3.134745, z: 1}
+  m_Center: {x: 0.008, y: 1.067372, z: 0}
 --- !u!1001 &2246615308589662390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -141,6 +155,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ebfcda0b2f673b48845fd7d5185ef6d, type: 3}
+--- !u!1 &7140866644747678839 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8950025584049648833, guid: 0ebfcda0b2f673b48845fd7d5185ef6d, type: 3}
+  m_PrefabInstance: {fileID: 2246615308589662390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &542375498327676592
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7140866644747678839}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!4 &7517251931600760525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8610654295540346491, guid: 0ebfcda0b2f673b48845fd7d5185ef6d, type: 3}
