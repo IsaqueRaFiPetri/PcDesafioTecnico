@@ -5,7 +5,9 @@ public class Enemy : MonoBehaviour
 {
     public NavMeshAgent agent;
 
-    public Transform playerPos;
+    Transform playerPos;
+
+    public float health;
 
     public LayerMask whatIsGround, whatIsPlayer;
 
@@ -93,6 +95,26 @@ public class Enemy : MonoBehaviour
     private void ResetAttack()
     {
         alreadyAttacked = false;
+    }
+    public void Takedamage(int damage)
+    {
+        health -= damage;
+
+        if (health < 0) Invoke(nameof(DestroyEnemy), 0.5f);
+
+    }
+    void DestroyEnemy()
+    {
+        HordeManager.enemiesKilled++;
+        Destroy(gameObject);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, sightRange);
     }
 }
 //https://www.youtube.com/watch?v=UjkSFoLxesw
