@@ -383,12 +383,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441894922}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: NextButton
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 891319366}
+          m_ObjectArgument: {fileID: 768446348}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1140,6 +1140,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1441894922}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: NextButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 891319366}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &768446351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1376,7 +1388,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441894922}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: NextButton
         m_Mode: 2
@@ -1388,7 +1400,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441894922}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: SairJogo
         m_Mode: 1
@@ -2095,6 +2107,7 @@ GameObject:
   - component: {fileID: 1441894919}
   - component: {fileID: 1441894918}
   - component: {fileID: 1441894916}
+  - component: {fileID: 1441894922}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2283,6 +2296,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1441894922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441894915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 779753a1088dc884ebd34441c4a258fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 545310466}
 --- !u!1 &1519766621
 GameObject:
   m_ObjectHideFlags: 0
@@ -2678,25 +2704,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: NextButton
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1896474847}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441894922}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: Teleport
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GameScene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1441894922}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: NextButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1896474847}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: GameScene
@@ -2824,12 +2850,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1441894922}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: NextButton
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 331221494}
+          m_ObjectArgument: {fileID: 1943813072}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3022,6 +3048,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1441894922}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: NextButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 331221494}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

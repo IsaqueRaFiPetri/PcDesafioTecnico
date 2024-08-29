@@ -88,10 +88,11 @@ public class GunSystem : MonoBehaviour
         {
             Debug.Log(rayHit.collider.name);
 
-            /*if (rayHit.collider.CompareTag("Enemy"))
+            if (rayHit.collider.CompareTag("Enemy"))
             {
-                rayHit.collider.GetComponent<ShootingAI>().TakeDamage(damage);
-            }*/
+                print("acertou");
+                rayHit.collider.GetComponent<Enemy>().TakeDamage(damage);
+            }
         }
 
         //ShakeCamera

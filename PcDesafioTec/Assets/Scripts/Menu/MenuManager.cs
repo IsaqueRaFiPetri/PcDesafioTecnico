@@ -8,6 +8,7 @@ public class MenuManager : MonoBehaviour
 
     public void Teleport(string tp)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(tp);
     }
 

@@ -4062,6 +4062,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1536575468}
     - target: {fileID: 3859815880572516212, guid: ab26c54ac93c04646b0fbe258b1ea266, type: 3}
+      propertyPath: bulletHoleGraphic
+      value: 
+      objectReference: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
+    - target: {fileID: 3859815880572516212, guid: ab26c54ac93c04646b0fbe258b1ea266, type: 3}
       propertyPath: whatIsEnemy.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -45547,7 +45551,7 @@ PrefabInstance:
     - target: {fileID: 3742677184840159441, guid: 9b17a81f3c7e37541b89823cdd463524, type: 3}
       propertyPath: bulletHoleGraphic
       value: 
-      objectReference: {fileID: 1000010844420130, guid: 4edabb1c0dde62743b137378c7d22980, type: 3}
+      objectReference: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
     - target: {fileID: 3742677184840159441, guid: 9b17a81f3c7e37541b89823cdd463524, type: 3}
       propertyPath: whatIsEnemy.m_Bits
       value: 64

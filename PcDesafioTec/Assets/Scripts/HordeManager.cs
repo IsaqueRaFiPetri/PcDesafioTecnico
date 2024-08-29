@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HordeManager : MonoBehaviour
 {
@@ -21,6 +22,11 @@ public class HordeManager : MonoBehaviour
     private void Update()
     {
         waveEnemies = initialEnemiesPerWave * waveNumber;
+
+        if(waveNumber == 37)
+        {
+            SceneManager.LoadScene(0);
+        }
     }
     IEnumerator SpawnHorde()
     {
