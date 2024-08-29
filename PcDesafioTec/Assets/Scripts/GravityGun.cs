@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GravityGun : MonoBehaviour
@@ -11,8 +12,13 @@ public class GravityGun : MonoBehaviour
 
     Rigidbody grabbedRB;
 
+    public TextMeshProUGUI text;
+    public AudioSource gravitavbleAudio;
+
     void Update()
     {
+        text.SetText("None");
+
         if (grabbedRB)
         {
             grabbedRB.MovePosition(Vector3.Lerp(grabbedRB.position, objectHolder.transform.position, Time.deltaTime * lerpSpeed));
@@ -22,6 +28,7 @@ public class GravityGun : MonoBehaviour
                 grabbedRB.isKinematic = false;
                 grabbedRB.AddForce(cam.transform.forward * throwForce, ForceMode.VelocityChange);
                 grabbedRB = null;
+                gravitavbleAudio.Play();
             }
         }
 
@@ -29,6 +36,7 @@ public class GravityGun : MonoBehaviour
         {
             if (grabbedRB)
             {
+                gravitavbleAudio.Play();
                 grabbedRB.isKinematic = false;
                 grabbedRB = null;
             }
@@ -44,6 +52,7 @@ public class GravityGun : MonoBehaviour
                         grabbedRB.isKinematic = true;
                     }
                 }
+                gravitavbleAudio.Play();
             }
         }
     }

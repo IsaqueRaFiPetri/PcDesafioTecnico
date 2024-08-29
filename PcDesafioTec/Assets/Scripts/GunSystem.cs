@@ -27,6 +27,7 @@ public class GunSystem : MonoBehaviour
 
     //UI / UX
     public GameObject reloadingPainel;
+    public AudioSource shootingAudio;
 
     private void Awake()
     {
@@ -100,6 +101,7 @@ public class GunSystem : MonoBehaviour
         float angle = Vector3.Angle(rayHit.normal, Vector3.forward);
         Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, angle, 0));
         Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+        shootingAudio.Play();
 
         bulletsLeft--;
         bulletsShot--;
