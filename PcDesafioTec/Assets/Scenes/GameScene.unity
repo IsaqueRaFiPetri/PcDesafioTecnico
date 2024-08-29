@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.063464, g: 0.052006677, b: 0.05664934, a: 1}
+  m_IndirectSpecularColor: {r: 0.063495524, g: 0.052040398, b: 0.05669667, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20197,13 +20197,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8270838645742660557, guid: fb5cc30e647c67b43ac8c0d2f49a3c96, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6217941373896483580, guid: fb5cc30e647c67b43ac8c0d2f49a3c96, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -2845779275431937956, guid: fb5cc30e647c67b43ac8c0d2f49a3c96, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2845779275431937956, guid: fb5cc30e647c67b43ac8c0d2f49a3c96, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2542329234108716012, guid: fb5cc30e647c67b43ac8c0d2f49a3c96, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -570912552334629456, guid: fb5cc30e647c67b43ac8c0d2f49a3c96, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fb5cc30e647c67b43ac8c0d2f49a3c96, type: 3}
       propertyPath: m_Name
       value: portal 2 button (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fb5cc30e647c67b43ac8c0d2f49a3c96, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383485308835894024, guid: fb5cc30e647c67b43ac8c0d2f49a3c96, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3518149977332418090, guid: fb5cc30e647c67b43ac8c0d2f49a3c96, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -20213,6 +20241,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 62c00ec56e29a4e429d4a1c2de39ea15, type: 2}
+    - target: {fileID: 4907493685621282919, guid: fb5cc30e647c67b43ac8c0d2f49a3c96, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb5cc30e647c67b43ac8c0d2f49a3c96, type: 3}
 --- !u!4 &957863358 stripped
@@ -21598,6 +21630,10 @@ PrefabInstance:
     - target: {fileID: 106282, guid: 548a40efc092c6f408cc4d1691b171cc, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 106282, guid: 548a40efc092c6f408cc4d1691b171cc, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 106282, guid: 548a40efc092c6f408cc4d1691b171cc, type: 3}
       propertyPath: m_StaticEditorFlags

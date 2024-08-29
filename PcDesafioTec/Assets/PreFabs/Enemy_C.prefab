@@ -69,8 +69,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f7cf8c3b2d584408470766db736587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
-  health: 0
+  agent: {fileID: 6383889349876265833}
+  health: 100
   whatIsGround:
     serializedVersion: 2
     m_Bits: 0
@@ -78,13 +78,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 0
-  timeBetweenAttacks: 0
+  walkPointRange: 5
+  timeBetweenAttacks: 2
   projectile: {fileID: 7741096642430587388, guid: 58ddf55e7f2d1aa46b37d738b04e8f8e, type: 3}
-  sightRange: 0
-  attackRange: 0
+  sightRange: 25
+  attackRange: 5
   playerInSightRange: 0
   playerInAttackRange: 0
+  anim: {fileID: 8693838272407804383}
 --- !u!65 &-5017862043601596667
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -469,5 +470,10 @@ MeshCollider:
 --- !u!4 &4129924652088263609 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8142007194097016341, guid: 877dc861ccb8af54a82af8e7768fd13c, type: 3}
+  m_PrefabInstance: {fileID: 5309261212218449324}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8693838272407804383 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3533354461774365811, guid: 877dc861ccb8af54a82af8e7768fd13c, type: 3}
   m_PrefabInstance: {fileID: 5309261212218449324}
   m_PrefabAsset: {fileID: 0}

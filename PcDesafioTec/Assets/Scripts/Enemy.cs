@@ -25,10 +25,16 @@ public class Enemy : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    public Animator anim;
+
     private void Awake()
     {
         playerPos = GameObject.Find("FirstPersonController").transform;
         agent = GetComponent<NavMeshAgent>();
+
+        anim.SetBool("isWalk", true);
+        anim.SetBool("canAttack", false);
+        anim.SetBool("getHit", false);
     }
     private void Update()
     {
@@ -38,7 +44,14 @@ public class Enemy : MonoBehaviour
 
         if (!playerInSightRange && !playerInAttackRange) Patroling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        if (playerInSightRange && playerInAttackRange) AttackPlayer();
+        if (playerInSightRange && playerInAttackRange)
+        {
+            AttackPlayer();
+
+            anim.SetBool("isWalk", false);
+            anim.SetBool("canAttack", true);
+            anim.SetBool("getHit", false);
+        }
     }
 
     private void Patroling()
@@ -101,7 +114,20 @@ public class Enemy : MonoBehaviour
         print("tomou dano");
         health -= damage;
 
-        if (health < 0) Invoke(nameof(DestroyEnemy), 0.5f);
+        anim.SetBool("isWalk", false);
+        anim.SetBool("canAttack", false);
+        anim.SetBool("getHit", true);
+
+        if (health < 0) 
+        {
+            anim.SetBool("isWalk", false);
+            anim.SetBool("canAttack", false);
+            anim.SetBool("getHit", false);
+
+            Invoke(nameof(DestroyEnemy), 0.5f);
+        }
+
+        Invoke(nameof(DestroyEnemy), 0.5f);
 
     }
     void DestroyEnemy()

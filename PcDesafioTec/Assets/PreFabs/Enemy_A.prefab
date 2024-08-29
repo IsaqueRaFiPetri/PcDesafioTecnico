@@ -85,6 +85,7 @@ MonoBehaviour:
   attackRange: 12
   playerInSightRange: 0
   playerInAttackRange: 0
+  anim: {fileID: 5313301123287425190}
 --- !u!65 &7564044377289702780
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -323,6 +324,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dc7b54399d54194e9f2619f1832e8d5, type: 3}
+--- !u!95 &5313301123287425190 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8268811963590475468, guid: 7dc7b54399d54194e9f2619f1832e8d5, type: 3}
+  m_PrefabInstance: {fileID: 4286331266920636010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7461771948262509251 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6697294229898335401, guid: 7dc7b54399d54194e9f2619f1832e8d5, type: 3}
