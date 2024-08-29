@@ -60,14 +60,6 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.rigidbody)
-        {
-            currentLife--;
-        }
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Enemy") || other.CompareTag("Projectile"))

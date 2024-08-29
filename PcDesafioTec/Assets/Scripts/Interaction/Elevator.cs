@@ -7,25 +7,28 @@ public class Elevator : MonoBehaviour
     Rigidbody elevatorRb;
     public float gravityScale = 1.0f; // Adjust this to change the gravity scale
 
-
     private void Start()
     {
         elevatorRb = GetComponent<Rigidbody>();
     }
 
-    private void OnTriggerStay(Collider other)
+    private void Update()
     {
-        gravityScale *= -1;
-
-        Vector3 gravity = gravityScale * Physics.gravity;
-        elevatorRb.AddForce(gravity, ForceMode.Acceleration);
-
+        elevatorRb.velocity = new Vector3(0, gravityScale, 0);
     }
-    private void OnTriggerExit()
+    private void OnTriggerEnter(Collider other)
     {
-        gravityScale *= -1;
-
-        Vector3 gravity = gravityScale * Physics.gravity;
-        elevatorRb.AddForce(gravity, ForceMode.Acceleration);
+        if (other.CompareTag("Player"))
+        {
+            gravityScale *= -1;
+            
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            gravityScale *= -1;
+        }
     }
 }
