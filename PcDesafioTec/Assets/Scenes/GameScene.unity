@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.063495524, g: 0.052040398, b: 0.05669667, a: 1}
+  m_IndirectSpecularColor: {r: 0.063464, g: 0.052006677, b: 0.05664934, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -36584,7 +36584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1693557181}
   - component: {fileID: 1693557182}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: GUN
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
